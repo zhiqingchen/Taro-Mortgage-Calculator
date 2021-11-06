@@ -72,10 +72,10 @@ const config = {
   },
   rn: {
     output: {
-      ios: 'ios/main.jsbundle',
-      iosAssetsDest: 'ios',
+      ios: 'ios/main.js',
+      iosAssetsDest: 'ios/assets',
       android: 'android/index.android.bundle',
-      androidAssetsDest: 'android'
+      androidAssetsDest: 'android/assets'
     },
   }
 };
