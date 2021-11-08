@@ -11,7 +11,6 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Release Taro React Native bundle
-        id: release
-        uses: zhiqingchen/taro-react-native-release@v1.0.2
+        uses: zhiqingchen/taro-react-native-release@v1.0.4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
