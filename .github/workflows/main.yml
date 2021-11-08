@@ -12,9 +12,6 @@ jobs:
 
       - name: Release Taro React Native bundle
         id: release
-        uses: zhiqingchen/taro-react-native-release@v1.0.1
+        uses: zhiqingchen/taro-react-native-release@v1.0.2
         with:
-          who-to-greet: 'Mona the Octocat'
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
