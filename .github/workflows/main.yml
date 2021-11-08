@@ -35,4 +35,4 @@ jobs:
         uses: zhiqingchen/taro-react-native-release@v1.0.13
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          name: Taro-Mortgage-calculator
+          appname: Taro-Mortgage-calculator
