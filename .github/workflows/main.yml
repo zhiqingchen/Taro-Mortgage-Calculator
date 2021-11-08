@@ -32,7 +32,7 @@ jobs:
         run: |
           yarn
       - name: Release Taro React Native bundle
-        uses: zhiqingchen/taro-react-native-release@v1.0.13
+        uses: zhiqingchen/taro-react-native-release@v1.0.14
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           appname: Taro-Mortgage-calculator
