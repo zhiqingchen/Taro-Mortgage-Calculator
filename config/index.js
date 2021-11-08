@@ -74,7 +74,7 @@ const config = {
     output: {
       ios: 'ios/main.js',
       iosAssetsDest: 'ios/assets',
-      android: 'android/index.android.bundle',
+      android: 'android/main.js',
       androidAssetsDest: 'android/assets'
     },
   }
