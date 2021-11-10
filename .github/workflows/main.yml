@@ -32,7 +32,14 @@ jobs:
         run: |
           yarn
       - name: Release Taro React Native bundle
-        uses: zhiqingchen/taro-react-native-release@v1.0.16
+        uses: zhiqingchen/taro-react-native-release@v1.0.17
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           appname: Taro-Mortgage-calculator
+      - name: Upload Android All Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifact
+          path: |
+            release/qrcode/ios.png
+            release/qrcode/android.png
