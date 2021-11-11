@@ -170,3 +170,6 @@ _book
 temp
 website/build
 website/package.json
+
+
+!ios/assets/node_modules
