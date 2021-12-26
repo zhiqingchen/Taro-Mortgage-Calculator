@@ -32,8 +32,6 @@ jobs:
         working-directory: ./app
         run: |
           yarn
-      - run: |
-          cd app
       - name: Release Taro React Native bundle
         uses: zhiqingchen/taro-react-native-release@v1.1
         with:
