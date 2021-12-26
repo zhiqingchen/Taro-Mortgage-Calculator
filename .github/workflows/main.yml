@@ -13,7 +13,7 @@ jobs:
       - name: Cache node_modules Folder
         uses: actions/cache@v2
         with:
-          path: ${{ github.workspace }}/node_modules
+          path: ${{ github.workspace }}/app/node_modules
           key: ${{ runner.os }}-node_modules
           restore-keys: ${{ runner.os }}-node_modules
       - name: Get Yarn Cache Directory Path
@@ -29,16 +29,19 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Install Dependencies
+        working-directory: ./app
         run: |
           yarn
       - name: Release Taro React Native bundle
         uses: zhiqingchen/taro-react-native-release@v1
+        working-directory: ./app
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           appname: Taro-Mortgage-calculator
           logo: https://pic3.58cdn.com.cn/nowater/fangfe/n_v25b1523466b894881b9bdeda7618a8af2.png
       - name: Upload Qr Image
         uses: actions/upload-artifact@v2
+        working-directory: ./app
         with:
           name: bundle-qr-code
           path: |
