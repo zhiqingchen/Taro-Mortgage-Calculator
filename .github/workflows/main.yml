@@ -33,17 +33,16 @@ jobs:
         run: |
           yarn
       - name: Release Taro React Native bundle
-        uses: zhiqingchen/taro-react-native-release@v1
-        working-directory: ./app
+        uses: zhiqingchen/taro-react-native-release@v1.1
         with:
+          workingdirectory: ./app
           token: ${{ secrets.GITHUB_TOKEN }}
           appname: Taro-Mortgage-calculator
           logo: https://pic3.58cdn.com.cn/nowater/fangfe/n_v25b1523466b894881b9bdeda7618a8af2.png
       - name: Upload Qr Image
         uses: actions/upload-artifact@v2
-        working-directory: ./app
         with:
           name: bundle-qr-code
           path: |
-            release/qrcode/ios.png
-            release/qrcode/android.png
+            app/release/qrcode/ios.png
+            app/release/qrcode/android.png
